@@ -1,0 +1,9 @@
+{
+    "path" : "~/git_repos/tidy_tuesday/animal_crossing",
+    "sortOrder" : [
+        {
+            "ascending" : true,
+            "columnIndex" : 2
+        }
+    ]
+}

@@ -1,0 +1,33 @@
+{
+    "collab_server" : "",
+    "contents" : "",
+    "created" : 1588888244638.000,
+    "dirty" : false,
+    "encoding" : "",
+    "folds" : "",
+    "hash" : "0",
+    "id" : "DFAC642F",
+    "lastKnownWriteTime" : 1588715130,
+    "last_content_update" : 1588888244638,
+    "path" : null,
+    "project_path" : null,
+    "properties" : {
+        "cacheKey" : "C5ADA53F",
+        "caption" : "review_text",
+        "contentUrl" : "grid_resource/gridviewer.html?env=&obj=review_text&cache_key=C5ADA53F",
+        "displayedObservations" : 137299,
+        "environment" : "",
+        "expression" : "review_text",
+        "object" : "review_text",
+        "preview" : 0,
+        "totalObservations" : 137299,
+        "variables" : 2
+    },
+    "read_only" : false,
+    "read_only_alternatives" : [
+    ],
+    "relative_order" : 3,
+    "source_on_save" : false,
+    "source_window" : "",
+    "type" : "r_dataframe"
+}

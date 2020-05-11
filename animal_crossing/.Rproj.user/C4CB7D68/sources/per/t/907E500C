@@ -1,0 +1,33 @@
+{
+    "collab_server" : "",
+    "contents" : "",
+    "created" : 1589149493628.000,
+    "dirty" : false,
+    "encoding" : "",
+    "folds" : "",
+    "hash" : "0",
+    "id" : "907E500C",
+    "lastKnownWriteTime" : 140707423584257,
+    "last_content_update" : 1589149493628,
+    "path" : null,
+    "project_path" : null,
+    "properties" : {
+        "cacheKey" : "930A9245",
+        "caption" : "villagers_count",
+        "contentUrl" : "grid_resource/gridviewer.html?env=&obj=villagers_count&cache_key=930A9245",
+        "displayedObservations" : 391,
+        "environment" : "",
+        "expression" : "villagers_count",
+        "object" : "villagers_count",
+        "preview" : 0,
+        "totalObservations" : 391,
+        "variables" : 12
+    },
+    "read_only" : false,
+    "read_only_alternatives" : [
+    ],
+    "relative_order" : 8,
+    "source_on_save" : false,
+    "source_window" : "",
+    "type" : "r_dataframe"
+}
