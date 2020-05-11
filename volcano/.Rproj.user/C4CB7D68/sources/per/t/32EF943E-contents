@@ -5,7 +5,7 @@ output: html_document
 ---
 
 ##### Using the volcano data from #TidyTuesday to plot all volcanoes that have erupted since the year 1800
-* Hover over to see the volcano name and yeaer of last eruption
+* Hover over to see the volcano name and year of last eruption
 
 ```{r include=FALSE}
 library(tidyverse)
@@ -24,7 +24,7 @@ sulfur <- readr::read_csv('https://raw.githubusercontent.com/rfordatascience/tid
 ```{r include=FALSE}
 # Creating volcano icon for leaflet plot
 volcano_icon <- makeIcon(
-  iconUrl = "nature (1).svg",
+  iconUrl = "images/nature (1).svg",
   iconWidth = 19, iconHeight = 48,
   iconAnchorX = 0, iconAnchorY = 0
 )
