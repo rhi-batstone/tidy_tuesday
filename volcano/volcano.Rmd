@@ -1,10 +1,10 @@
 ---
 title: "Tidy Tuesday Volcanoes!"
-author: "Rhibarb"
+author: \\[\@Rhibarb](https://twitter.com/Rhibarb)
 output: html_document
 ---
 
-##### Using the volcano data from #TidyTuesday to plot all volcanoes that have erupted since the year 1800
+##### Using the volcano data from [#TidyTuesday](https://twitter.com/hashtag/TidyTuesday?src=hashtag_click) to plot all volcanoes that have erupted since the year 1800
 * Hover over to see the volcano name and year of last eruption
 
 ```{r include=FALSE}
