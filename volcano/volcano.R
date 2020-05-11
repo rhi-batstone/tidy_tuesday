@@ -9,7 +9,7 @@ sulfur <- readr::read_csv('https://raw.githubusercontent.com/rfordatascience/tid
 
 # Creating volcano icon for leaflet plot
 volcano_icon <- makeIcon(
-  iconUrl = "nature (1).svg",
+  iconUrl = "images/nature (1).svg",
   iconWidth = 19, iconHeight = 48,
   iconAnchorX = 0, iconAnchorY = 0
 )
