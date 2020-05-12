@@ -86,9 +86,18 @@ eruptions_dates <- eruptions %>%
 ```
 ```{r include=FALSE}
 eruption_dates_for_plot <- eruptions_dates %>% 
-  drop_na(start_date, end_date) %>% 
-  group_by(volcano_name) %>% 
-  arrange(desc(start_date)) %>% 
+  drop_na(
+    start_date,
+    end_date
+    ) %>% 
+  group_by(
+    volcano_name
+    ) %>% 
+  arrange(
+    desc(
+      start_date
+      )
+    ) %>% 
   slice(1) %>% 
   ungroup()
 ```
@@ -99,14 +108,19 @@ eruption_dates_for_plot <- eruptions_dates %>%
 ```{r echo=FALSE, message=FALSE, warning=FALSE}
 eruption_length_plot <- eruption_dates_for_plot %>% 
   top_n(30) %>% 
-  ggplot(aes(volcano_name, total_days)) +
+  ggplot(aes(volcano_name, 
+             total_days)) +
   geom_segment(aes(x = volcano_name, 
                    xend = volcano_name, 
                    y = 0, 
                    yend = total_days)) +
   geom_point(size = 5, 
              color="red", 
-             fill=alpha("orange", 0.3), alpha=0.7, shape=21, stroke=2) +
+             fill=alpha("orange", 
+                        0.3), 
+             alpha=0.7, 
+             shape=21, 
+             stroke=2) +
   labs(
     x = "Volcano Name",
     y = "Eruption Length"
