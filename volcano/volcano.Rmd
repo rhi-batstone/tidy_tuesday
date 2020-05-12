@@ -4,12 +4,16 @@ author: \\[\@Rhibarb](https://twitter.com/Rhibarb)
 output: html_document
 ---
 
-##### Using the volcano data from [#TidyTuesday](https://twitter.com/hashtag/TidyTuesday?src=hashtag_click) to plot all volcanoes that have erupted since the year 1800
+#### Volcano data from [#TidyTuesday](https://twitter.com/hashtag/TidyTuesday?src=hashtag_click)
+
+##### Plot all volcanoes that have erupted since the year 1800 
 * Hover over to see the volcano name and year of last eruption
 
 ```{r include=FALSE}
 library(tidyverse)
 library(leaflet)
+library(lubridate)
+library(plotly)
 ```
 
 
@@ -58,4 +62,65 @@ volcano %>%
   )
 
 ```
+
+```{r include=FALSE}
+#creating start date and end date of eruptions by combined the year, month and day columns
+#Creating total_days meaning length of eruption
+eruptions_dates <- eruptions %>% 
+  mutate(
+    start_date = as_date(
+      paste(
+        start_year, 
+        start_month, 
+        start_day)
+      ),
+    end_date = as_date(
+      paste(
+        end_year, 
+        end_month, 
+        end_day)
+      ),
+    total_days = end_date - start_date,
+    )
+
+```
+```{r include=FALSE}
+eruption_dates_for_plot <- eruptions_dates %>% 
+  drop_na(start_date, end_date) %>% 
+  group_by(volcano_name) %>% 
+  arrange(desc(start_date)) %>% 
+  slice(1) %>% 
+  ungroup()
+```
+ 
+##### Length of eruptions in days of the volcanoes most recent eruption
+* Selected the 30 longest.
+
+```{r echo=FALSE, message=FALSE, warning=FALSE}
+eruption_length_plot <- eruption_dates_for_plot %>% 
+  top_n(30) %>% 
+  ggplot(aes(volcano_name, total_days)) +
+  geom_segment(aes(x = volcano_name, 
+                   xend = volcano_name, 
+                   y = 0, 
+                   yend = total_days)) +
+  geom_point(size = 5, 
+             color="red", 
+             fill=alpha("orange", 0.3), alpha=0.7, shape=21, stroke=2) +
+  labs(
+    x = "Volcano Name",
+    y = "Eruption Length"
+  ) +
+  coord_flip()
+
+eruption_length_plot
+
+#playing around with a range slider and hover overs in plotly but not included yet as it
+#is not aesthetically right!
+
+#ggplotly(eruption_length_plot, tooltip = c("volcano_name",
+   # "total_days")) %>% 
+ # rangeslider()
+```
+
 
