@@ -64,8 +64,8 @@ volcano %>%
 ```
 
 ```{r include=FALSE}
-#creating start date and end date of eruptions by combined the year, month and day columns
-#Creating total_days meaning length of eruption
+# Creating start date and end date of eruptions by combined the year, month and day columns
+# Creating total_days meaning length of eruption
 eruptions_dates <- eruptions %>% 
   mutate(
     start_date = as_date(
